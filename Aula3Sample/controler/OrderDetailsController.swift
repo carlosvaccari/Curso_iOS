@@ -10,6 +10,11 @@ import UIKit
 
 class OrderDetailsController : UIViewController {
     
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        print("back")
+    }
+    
     @IBOutlet weak var pedido: UITextField!
     @IBOutlet weak var cartao: UITextField!
     @IBOutlet weak var nome: UITextField!

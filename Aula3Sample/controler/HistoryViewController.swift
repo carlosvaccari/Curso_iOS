@@ -12,20 +12,18 @@ class HistoryViewController: UIViewController, ListDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var myOrders: [String] = ["pedido 1", "pedido 2"]
-    
-    var myProducts: [Product] = [Product(name: "Carlos", cartao: "123456789", pedido: "PS5"), Product(name: "Felipe", cartao: "987654321", pedido: "MacBook")]
+    var myProducts: [Product] = [Product(name: "carlos", cartao: "123456789", pedido: "PS5"), Product(name: "Felipe", cartao: "987654321", pedido: "MacBook")]
 
+    var user = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func add(order: Product) {
-        print("ADD")
         myProducts.append(order)
         tableView.reloadData()
-        print(myOrders)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,9 +32,6 @@ class HistoryViewController: UIViewController, ListDelegate {
         }
         
         switch identifier {
-        case "showCheckout":
-            let vc = segue.destination as? CheckoutViewController
-            vc?.delegate = self
         case "showOrder":
             print(myProducts[0].pedido)
             let vc = segue.destination as? OrderDetailsController
@@ -45,8 +40,12 @@ class HistoryViewController: UIViewController, ListDelegate {
             }
             vc?.setProduct(product: product)
         case "showEditUser":
-            let vc = segue.destination as? UIViewController
-
+            let vc = segue.destination as? UserController
+            vc?.setUser(user: user)
+        case "showCheckout":
+            let vc = segue.destination as? ProductsController
+            vc?.setDelegate(delegate: self)
+            vc?.setUser(user: user)
         default:
             break
         }
@@ -69,7 +68,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         if let labelOrderThings = cell.viewWithTag(22) as? UILabel,
             let labelOrderStatus = cell.viewWithTag(44) as? UILabel {
             
-            labelOrderThings.text = myProducts[indexPath.row].name // Aqui vai nome do pedido, data..
+            labelOrderThings.text = myProducts[indexPath.row].pedido // Aqui vai nome do pedido, data..
 //            labelOrderStatus.text = "" // Aqui vai o status do pedido
         }
 

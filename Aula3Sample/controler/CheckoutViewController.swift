@@ -18,7 +18,6 @@ class CheckoutViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func buy(_ sender: UIButton) {

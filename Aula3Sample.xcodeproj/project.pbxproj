@@ -17,6 +17,8 @@
 		93CAB71B221F1FE4008BFE09 /* ListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB71A221F1FE4008BFE09 /* ListDelegate.swift */; };
 		93CAB71E221F2FF4008BFE09 /* OrderDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB71D221F2FF4008BFE09 /* OrderDetailsController.swift */; };
 		93CAB720221F342D008BFE09 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB71F221F342D008BFE09 /* Product.swift */; };
+		93CAB72222207062008BFE09 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB72122207062008BFE09 /* UserController.swift */; };
+		93CAB7242220818F008BFE09 /* ProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAB7232220818F008BFE09 /* ProductsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		93CAB71A221F1FE4008BFE09 /* ListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDelegate.swift; sourceTree = "<group>"; };
 		93CAB71D221F2FF4008BFE09 /* OrderDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsController.swift; sourceTree = "<group>"; };
 		93CAB71F221F342D008BFE09 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		93CAB72122207062008BFE09 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		93CAB7232220818F008BFE09 /* ProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,10 @@
 				93CAB719221F1FB1008BFE09 /* delegate */,
 				93CAB714221F1BB2008BFE09 /* model */,
 				2FA40EE0221E46AF00D5ED2B /* AppDelegate.swift */,
-				2FA40EE2221E46AF00D5ED2B /* HistoryViewController.swift */,
 				2FA40EE4221E46AF00D5ED2B /* Main.storyboard */,
 				2FA40EE7221E46B400D5ED2B /* Assets.xcassets */,
 				2FA40EE9221E46B400D5ED2B /* LaunchScreen.storyboard */,
 				2FA40EEC221E46B400D5ED2B /* Info.plist */,
-				2FA40EF2221E4B2600D5ED2B /* CheckoutViewController.swift */,
 			);
 			path = Aula3Sample;
 			sourceTree = "<group>";
@@ -98,7 +100,11 @@
 		93CAB71C221F2FC7008BFE09 /* controler */ = {
 			isa = PBXGroup;
 			children = (
+				2FA40EE2221E46AF00D5ED2B /* HistoryViewController.swift */,
+				2FA40EF2221E4B2600D5ED2B /* CheckoutViewController.swift */,
 				93CAB71D221F2FF4008BFE09 /* OrderDetailsController.swift */,
+				93CAB72122207062008BFE09 /* UserController.swift */,
+				93CAB7232220818F008BFE09 /* ProductsController.swift */,
 			);
 			path = controler;
 			sourceTree = "<group>";
@@ -176,6 +182,8 @@
 			files = (
 				93CAB71B221F1FE4008BFE09 /* ListDelegate.swift in Sources */,
 				93CAB71E221F2FF4008BFE09 /* OrderDetailsController.swift in Sources */,
+				93CAB7242220818F008BFE09 /* ProductsController.swift in Sources */,
+				93CAB72222207062008BFE09 /* UserController.swift in Sources */,
 				93CAB718221F1BE1008BFE09 /* User.swift in Sources */,
 				2FA40EE3221E46AF00D5ED2B /* HistoryViewController.swift in Sources */,
 				2FA40EF3221E4B2600D5ED2B /* CheckoutViewController.swift in Sources */,
